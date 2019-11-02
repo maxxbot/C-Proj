@@ -71,114 +71,120 @@ int lucas_lehmer(unsigned long p)
 
 void *mersenne0(void *param0)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne0\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 127; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
 
 void *mersenne1(void *param1)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne1\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 129; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
 
 void *mersenne2(void *param2)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne2\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 131; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
 
 void *mersenne3(void *param3)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne3\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 133; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
 
 void *mersenne4(void *param4)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne4\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 135; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
 
 void *mersenne5(void *param5)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne5\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 137; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
@@ -186,37 +192,40 @@ void *mersenne5(void *param5)
 void *mersenne6(void *param6)
 {
   clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne6\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 139; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
 
 void *mersenne7(void *param6)
 {
-  clock_t end;
-  clock_t begin;
+  struct timespec start, finish;
+  double elapsed;
   unsigned long i;
   double totalPrime;
   printf("Mersenne7\n");
-  begin = clock();
+  clock_gettime(CLOCK_MONOTONIC, &start);
   for (i = 141; ; i = i + 16) 
   {
     if (lucas_lehmer(i)) 
     {
-	  end = clock();
-	  totalPrime = (((double)(end - begin))/CLOCKS_PER_SEC);
-      printf("M%lu \t%lf\n", i, totalPrime);
+	  clock_gettime(CLOCK_MONOTONIC, &finish);
+	  elapsed = (finish.tv_sec - start.tv_sec);
+          elapsed += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+      printf("M%lu \t%lf\n", i, elapsed);
     }
   }
 }
